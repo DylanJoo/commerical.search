@@ -1,0 +1,22 @@
+# TREC Product Search data download instructions
+
+The files downloaded are from the following codes:
+- collection (pyserini-full)
+``` wget https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/pyserini-full/collection.jsonl.gz
+```
+<!-- from huggingface_hub import hf_hub_download -->
+<!-- hf_hub_download("trec-product-search/Product-Search-Corpus-v0.1", filename='corpus.jsonl.gz', subfolder='data/jsonl', repo_type='dataset', cache_dir='/tmp2/trec/pdf/') -->
+
+- query
+``` wget https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/qid2query.tsv
+```
+- qrel
+``` wget https://huggingface.co/datasets/trec-product-search/Product-Search-Corpus-v0.1/resolve/main/data/qid2query.tsv
+```
+
+Type       | Subfoler    | Filename         | Num Records |
+---        | ---         | ---              |  ---        | 
+Collection | collection/ | collection.jsonl | 30000       |
+Query      | query/      | qid2query.tsv    | 30734       |
+Qrel       | qrel/       | 
+
