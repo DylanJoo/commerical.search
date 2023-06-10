@@ -15,3 +15,10 @@ def load_collection(path, image_included=False):
         data[doc_id] = {'title': title, 'description': desc}
     return data
         
+def load_query(path):
+    data = dict()
+    with open(path, 'r') as f:
+        for line in f:
+            qid, qtext = line.strip().split('\t')
+            data[qid] = qtext.strip()
+    return data
