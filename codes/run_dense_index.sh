@@ -3,7 +3,7 @@ COLLECTIONS=/tmp2/trec/pds/data/collection/collection_sim.jsonl
 
 # encode title and description
 INDEX=/tmp2/trec/pds/indexes/ance-sim/
-python encode/main.py input \
+python encode/retrieve.py input \
     --corpus $COLLECTIONS \
     --fields title description \
     --shard-id 0 \
@@ -13,13 +13,13 @@ python encode/main.py input \
     --encoder-class ance \
     --encoder $ENCODER \
     --fields title description \
-    --batch 48 \
+    --batch 32 \
     --fp16 \
     --device cuda:2
 
 # encode title and description
 INDEX=/tmp2/trec/pds/indexes/ance-sim-title/
-python encode/main.py input \
+python encode/retrieve.py input \
     --corpus $COLLECTIONS \
     --fields title \
     --shard-id 0 \
